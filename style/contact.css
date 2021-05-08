@@ -1,0 +1,243 @@
+:root {
+  --theme-color: #807bb8;
+}
+section {
+  padding: 5rem 10px;
+  background-position: center center;
+}
+
+@media screen and (max-width: 500px) {
+  .contact .form-box {
+    width: 90% !important;
+  }
+}
+.form-box {
+  width: 60%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  background-position: center center;
+  box-shadow: 10px 10px var(--theme-color);
+  border-radius: 10px;
+  border: 2px solid var(--theme-color);
+}
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--theme-color);
+}
+.form-item {
+  margin-bottom: 0.7rem;
+  max-width: 100%;
+  position: relative;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  line-height: 1.4;
+  width: 100%;
+  font-size: 1.2rem;
+  outline-color: var(--theme-color);
+  border-radius: 10px;
+}
+label {
+  margin-bottom: 3px;
+}
+input,
+textarea {
+  padding: 3px;
+  background-color: rgba(250, 250, 250, 0.85);
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.button1 {
+  background-color: #4fda54;
+  text-transform: uppercase;
+}
+.button2 {
+  background-color: #1fc1f7;
+  text-transform: uppercase;
+}
+
+/*checkbox*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.new {
+  padding: 5px;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: "";
+  position: relative;
+  display: inline-flex;
+  justify-content: space-around;
+  margin: 0px 10px 0px 10px;
+  left: 0;
+  top: 0;
+  width: 1.4em;
+  height: 1.4em;
+  border: 1px solid #aaa;
+  background: #fff;
+  border-radius: 0.2em;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 0 rgba(203, 34, 237, 0.2);
+  -webkit-transition: all 0.275s;
+  transition: all 0.275s;
+}
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: "✕";
+  position: absolute;
+  top: 0.525em;
+  left: 0.5em;
+  font-size: 1.375em;
+  color: var(--theme-color);
+  line-height: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(45deg);
+  transform: scale(0) rotate(45deg);
+}
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0);
+}
+.form-group input {
+  opacity: 0;
+  padding: 50px;
+  height: 20px;
+  width: fit-content;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin: 6px auto 5px auto;
+  color: transparent;
+}
+
+.form-group label {
+  position: absolute;
+  cursor: pointer;
+  margin: 0 20px 0 20px;
+}
+
+#reason {
+  font-size: 20px;
+  border-radius: 10px;
+}
+@keyframes submit-hover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes submit-active {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #f87da9;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+
+#store-owner-form{
+  width: 80%;
+  border: var(--theme-color) solid;
+  padding: 30px;
+  margin: 30px;
+  display: none
+}
